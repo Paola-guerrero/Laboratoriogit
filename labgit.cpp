@@ -1,6 +1,8 @@
 
+
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main() {
@@ -11,12 +13,12 @@ int main() {
         return 1;
     }
 
-    int dato;
+    string linea;
 
     cout << "Datos leidos del archivo:" << endl;
 
-    while (archivo >> dato) {
-        cout << dato << endl;
+    while (getline(archivo, linea)) {
+        cout << linea << endl;
     }
 
     archivo.close();
