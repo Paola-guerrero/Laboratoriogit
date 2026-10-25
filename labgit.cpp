@@ -2,26 +2,23 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <sstream>
 using namespace std;
 
 int main() {
-    ifstream archivo("input/datos.txt");
+     ifstream archivoEntrada("input/archivoEntrada.txt");
 
-    if (!archivo.is_open()) {
-        cout << "Error al abrir el archivo de datos." << endl;
-        return 1;
+    if (archivoEntrada.is_open()) {
+        cout << "archivo abierto." << endl;
+        string linea;
+
+         while (getline(archivoEntrada, linea)) {
     }
 
-    string linea;
-
-    cout << "Datos leidos del archivo:" << endl;
-
-    while (getline(archivo, linea)) {
-        cout << linea << endl;
-    }
-
-    archivo.close();
-
-    return 0;
+   
 }
+
+}
+    
+
+
